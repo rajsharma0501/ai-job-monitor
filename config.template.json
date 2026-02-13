@@ -31,33 +31,18 @@
       "priority": "high"
     },
     {
-      "name": "Snowflake",
-      "url": "https://careers.snowflake.com/us/en/search-results?location=Pune",
-      "priority": "high"
-    },
-    {
       "name": "Figma",
       "url": "https://www.figma.com/careers/?office=Bengaluru",
       "priority": "high"
     },
     {
       "name": "Netflix",
-      "url": "https://jobs.netflix.com/search?query=machine%20learning&location=Remote%2C%20India",
+      "url": "https://jobs.netflix.com/",
       "priority": "high"
     },
     {
       "name": "NVIDIA",
       "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?locationCountry=f2e609fe92974a55a05fc1cdc2b09837",
-      "priority": "medium"
-    },
-    {
-      "name": "ServiceNow",
-      "url": "https://careers.servicenow.com/careers/jobs?keywords=AI%20engineer&location=India",
-      "priority": "medium"
-    },
-    {
-      "name": "Meta",
-      "url": "https://www.metacareers.com/jobs?offices[0]=Hyderabad%2C%20India&teams[0]=Engineering",
       "priority": "medium"
     },
     {
@@ -82,17 +67,12 @@
     },
     {
       "name": "LinkedIn",
-      "url": "https://careers.linkedin.com/search?keywords=machine%20learning&location=Hyderabad",
+      "url": "https://careers.linkedin.com/",
       "priority": "medium"
     },
     {
       "name": "Intuit",
       "url": "https://jobs.intuit.com/search-jobs/India",
-      "priority": "medium"
-    },
-    {
-      "name": "Uber",
-      "url": "https://www.uber.com/us/en/careers/list/?location=IND&query=machine%20learning",
       "priority": "medium"
     },
     {
@@ -102,7 +82,7 @@
     },
     {
       "name": "Canva",
-      "url": "https://www.canva.com/careers/jobs/?location=India",
+      "url": "https://www.lifeatcanva.com/en/jobs/",
       "priority": "medium"
     },
     {

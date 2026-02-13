@@ -2,8 +2,8 @@ name: AI Job Monitor
 
 on:
   schedule:
-    # Run every hour at :05 past the hour (5:05 AM, 6:05 AM, etc. IST)
-    - cron: '35 */1 * * *'  # Every hour at :35 UTC (= :05 IST)
+    # Run every 30 minutes
+    - cron: '*/30 * * * *'
   
   workflow_dispatch:  # Manual trigger from GitHub Actions tab
   
@@ -22,10 +22,10 @@ jobs:
         fetch-depth: 0  # Full history for git commits
         token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Set up Python 3.11
+    - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.12'
         cache: 'pip'
     
     - name: Install dependencies
