@@ -81,28 +81,18 @@
       "priority": "medium"
     },
     {
-      "name": "Canva",
-      "url": "https://www.lifeatcanva.com/en/jobs/",
-      "priority": "medium"
-    },
-    {
-      "name": "Postman",
-      "url": "https://www.postman.com/company/careers/open-positions/?location=India",
-      "priority": "medium"
-    },
-    {
       "name": "Glean",
       "url": "https://www.glean.com/careers",
       "priority": "medium"
     },
     {
       "name": "OpenAI",
-      "url": "https://openai.com/careers/",
+      "url": "https://jobs.ashbyhq.com/openai/",
       "priority": "high"
     },
     {
       "name": "Perplexity",
-      "url": "https://www.perplexity.ai/hub/careers",
+      "url": "https://jobs.ashbyhq.com/perplexity/",
       "priority": "high"
     },
     {
@@ -117,8 +107,8 @@
     },
     {
       "name": "Notion",
-      "url": "https://www.notion.com/careers",
-      "priority": "medium"
+      "url": "https://jobs.ashbyhq.com/notion/",
+      "priority": "high"
     },
     {
       "name": "Atlassian",

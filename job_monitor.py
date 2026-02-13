@@ -212,6 +212,7 @@ class JobMonitor:
         try:
             soup = BeautifulSoup(html, 'html.parser')
             jobs = []
+            seen = set()
             
             # Generic job extraction
             job_elements = soup.find_all(['a', 'div', 'li'], 
@@ -244,6 +245,11 @@ class JobMonitor:
                     
                     # IMPROVED: Include URL in hash for better dedup
                     job_id = hashlib.md5(f"{company}:{title}:{link}".encode()).hexdigest()
+
+                    dedup_key = (title.lower(), (link or url))
+                    if dedup_key in seen:
+                        continue
+                    seen.add(dedup_key)
                     
                     jobs.append({
                         'id': job_id,
@@ -429,6 +435,7 @@ class JobMonitor:
                 job['priority'] = priority
                 
                 print(f"     - [{score}/100 {priority}] {job['title']}")
+                print(f"       {job['url']}")
                 
                 # INSTANT alert for URGENT (80+)
                 if priority == 'URGENT':
