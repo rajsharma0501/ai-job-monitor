@@ -1,0 +1,119 @@
+{
+  "telegram": {
+    "enabled": true,
+    "bot_token": "WILL_BE_SET_VIA_GITHUB_SECRETS",
+    "chat_id": "WILL_BE_SET_VIA_GITHUB_SECRETS"
+  },
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "from": "OPTIONAL_VIA_GITHUB_SECRETS",
+    "to": "OPTIONAL_VIA_GITHUB_SECRETS",
+    "password": "OPTIONAL_VIA_GITHUB_SECRETS"
+  },
+  "state_expiry_days": 90,
+  "max_job_age_days": 2,
+  "companies": [
+    {
+      "name": "Microsoft",
+      "url": "https://careers.microsoft.com/v2/global/en/search?q=AI%20engineer&l=en_us&lc=India&exp=5",
+      "priority": "high"
+    },
+    {
+      "name": "Google",
+      "url": "https://careers.google.com/jobs/results/?distance=50&hl=en_US&jlo=en_US&location=India&q=AI%20Machine%20Learning%20Principal",
+      "priority": "high"
+    },
+    {
+      "name": "Databricks",
+      "url": "https://www.databricks.com/company/careers/open-positions?department=Engineering&location=India",
+      "priority": "high"
+    },
+    {
+      "name": "Snowflake",
+      "url": "https://careers.snowflake.com/us/en/search-results?location=Pune",
+      "priority": "high"
+    },
+    {
+      "name": "Figma",
+      "url": "https://www.figma.com/careers/?office=Bengaluru",
+      "priority": "high"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://jobs.netflix.com/search?query=machine%20learning&location=Remote%2C%20India",
+      "priority": "high"
+    },
+    {
+      "name": "NVIDIA",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?locationCountry=f2e609fe92974a55a05fc1cdc2b09837",
+      "priority": "medium"
+    },
+    {
+      "name": "ServiceNow",
+      "url": "https://careers.servicenow.com/careers/jobs?keywords=AI%20engineer&location=India",
+      "priority": "medium"
+    },
+    {
+      "name": "Meta",
+      "url": "https://www.metacareers.com/jobs?offices[0]=Hyderabad%2C%20India&teams[0]=Engineering",
+      "priority": "medium"
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.jobs/en/search?base_query=machine+learning&loc_query=India",
+      "priority": "medium"
+    },
+    {
+      "name": "Salesforce",
+      "url": "https://careers.salesforce.com/en/jobs/?search=AI&country=India",
+      "priority": "medium"
+    },
+    {
+      "name": "UiPath",
+      "url": "https://careers.uipath.com/careers?location=India",
+      "priority": "medium"
+    },
+    {
+      "name": "Adobe",
+      "url": "https://careers.adobe.com/us/en/search-results?keywords=AI%20machine%20learning&location=India",
+      "priority": "medium"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://careers.linkedin.com/search?keywords=machine%20learning&location=Hyderabad",
+      "priority": "medium"
+    },
+    {
+      "name": "Intuit",
+      "url": "https://jobs.intuit.com/search-jobs/India",
+      "priority": "medium"
+    },
+    {
+      "name": "Uber",
+      "url": "https://www.uber.com/us/en/careers/list/?location=IND&query=machine%20learning",
+      "priority": "medium"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com/jobs/search?query=engineer&remote_location=IN",
+      "priority": "medium"
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com/careers/jobs/?location=India",
+      "priority": "medium"
+    },
+    {
+      "name": "Postman",
+      "url": "https://www.postman.com/company/careers/open-positions/?location=India",
+      "priority": "medium"
+    },
+    {
+      "name": "Atlassian",
+      "url": "https://www.atlassian.com/company/careers/all-jobs?location=India&search=engineer",
+      "priority": "medium"
+    }
+  ]
+}

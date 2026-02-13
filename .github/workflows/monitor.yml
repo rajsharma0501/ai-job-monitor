@@ -1,0 +1,68 @@
+name: AI Job Monitor
+
+on:
+  schedule:
+    # Run every hour at :05 past the hour (5:05 AM, 6:05 AM, etc. IST)
+    - cron: '35 */1 * * *'  # Every hour at :35 UTC (= :05 IST)
+  
+  workflow_dispatch:  # Manual trigger from GitHub Actions tab
+  
+  push:
+    branches: [ main ]  # Run once on push to test
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for git commits
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Restore job state cache
+      uses: actions/cache@v4
+      with:
+        path: job_state.json
+        key: job-state-${{ github.ref_name }}
+        restore-keys: |
+          job-state-
+    
+    - name: Run job monitor
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      run: |
+        echo "Starting job monitor at $(date)"
+        python job_monitor.py --once
+        echo "Monitor completed at $(date)"
+    
+    - name: Save job state cache
+      uses: actions/cache@v4
+      with:
+        path: job_state.json
+        key: job-state-${{ github.ref_name }}
+    
+    - name: Upload logs as artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: monitor-logs-${{ github.run_number }}
+        path: |
+          *.log
+        retention-days: 7
